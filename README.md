@@ -161,3 +161,16 @@ STATICFILES_DIRS = [
 [08/May/2020 21:35:08] "GET /admin/static/admin/css/dashboard.css HTTP/1.1" 404 4161
 其中 static 是在settings.py中设置的STATIC_URL = 'static/'
 将 settings.py中的  STATIC_URL = '/'  即可
+
+
+10. 注意事项
+从github上拉下来后
+```
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+```
+因为staticfiles没有同步到github，因此需要
+```
+python manage.py collectstatic
+```
