@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Map from './components/Map';
 import Counter from './components/Counter'
+import Apitest from './components/Apitest'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <Apitest />
         <Map />
         <a
           className="App-link"
@@ -23,6 +25,7 @@ function App() {
         </a>
       </header>
       <Counter />
+
 
     </div>
   );

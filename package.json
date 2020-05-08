@@ -1,22 +1,24 @@
 {
   "name": "bee_front",
   "version": "0.1.0",
+  "homepage": "./",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "npm run watch:css && react-scripts start",
+    "start": "npm run watch:css && REACT_APP_API_DOMAIN='http://127.0.0.1:8000' react-scripts start",
     "build": "npm run build:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
-    "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
+    "build:css": "postcss src/assets/tailwind.css -o build/main.css",
+    "watch:css": "postcss src/assets/tailwind.css -o build/main.css"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -37,6 +39,6 @@
     "@fullhuman/postcss-purgecss": "^2.1.2",
     "autoprefixer": "^9.7.6",
     "postcss-cli": "^7.1.0",
-    "tailwindcss": "^1.2.0"
+    "tailwindcss": "^1.4.0"
   }
 }
